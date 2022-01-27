@@ -4,7 +4,7 @@ const details = document.querySelector('.details');
 const time = document.querySelector('img.time');
 const icon = document.querySelector('.icon img')
 
-const updateUI = (data) => {  //this data will be same as the objects we return in city updates and at the end in form submit
+const updateUI = (data) => { 
   // destructure properties
   const { cityDets, weather } = data;
   // update details template
@@ -16,3 +16,6 @@ const updateUI = (data) => {  //this data will be same as the objects we return 
       <span>&deg;C</span>
     </div>
   `;
+  //update the night and day icon img
+  const iconSrc= `img/icons/${weather.WeatherIcon}.svg`;
+  icon.setAttribute('src' , iconSrc)}
