@@ -42,11 +42,11 @@ cityForm.addEventListener('submit', e => {
     // prevent default action
     e.preventDefault();
     
-    // get city value
+// get city value
     const city = cityForm.city.value.trim();
     cityForm.reset();
   
-   // update the ui with new city
+// update the ui with new city
   updateCity(city)
   .then(data => updateUI(data))
   .catch(err => console.log(err));
@@ -55,7 +55,6 @@ cityForm.addEventListener('submit', e => {
 localStorage.setItem('city' , city)
 console.log(city);
 });
-
 
 if(localStorage.getItem('city')){ //if city were exist in local storage
     updateCity(localStorage.getItem('city')) //update city automaticaly by the city were existin local storage
