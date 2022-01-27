@@ -55,3 +55,10 @@ cityForm.addEventListener('submit', e => {
 localStorage.setItem('city' , city)
 console.log(city);
 });
+
+
+if(localStorage.getItem('city')){ //if city were exist in local storage
+    updateCity(localStorage.getItem('city')) //update city automaticaly by the city were existin local storage
+    .then(data=>updateUI(data)) //update city is a promise so we able to add .then method
+  .catch(err =>console.log('there is one'))
+  }
